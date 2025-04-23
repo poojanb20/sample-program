@@ -62,4 +62,53 @@ void push(N** first,int item)
         new->link=temp;
     
     printf("%d is added\n ",new->link->info);}
+=======
+
+void display(N* first)
+{N* new;
+    if(first==NULL)
+    printf("Nothing to display\n");
+    
+   
+    else
+    {
+   
+    new=first;
+    while(new!=NULL)
+    {
+       printf("%d\t",new->info);
+       new=new->link;
+       
+    }
+  
+    }
+ 
+ int pop(N** first)
+{int saver;
+    N* new;
+    new=*first;
+    if(*first==NULL)
+    {
+       return 0;}
+   else  if((*first)->link==NULL)
+    {
+        saver=(*first)->info;
+        *first=NULL;
+        return saver;
+    }
+    else
+    {N* prev=NULL;
+        while(new->link!=NULL)
+        {prev=new;
+            new=new->link;
+            
+        }
+        saver=new->info;
+        prev->link=NULL;
+        free(new);
+        return saver;
+    }
+    
+}
+
 }
