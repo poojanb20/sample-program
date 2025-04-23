@@ -41,6 +41,28 @@ main()
         }
     }
 }
+void push(N** first,int item)
+{N* new;
+    N* temp;
+    temp=getnode();
+    temp->info=item;
+    if(*first==NULL)
+    {
+        *first=temp;
+        printf("%d added\n",(*first)->info);
+        
+    }
+    else
+    {
+         new=*first;
+        while(new->link!=NULL)
+        {
+            new=new->link;
+        }
+        new->link=temp;
+    
+    printf("%d is added\n ",new->link->info);}
+=======
 
 void display(N* first)
 {N* new;
@@ -88,4 +110,5 @@ void display(N* first)
     }
     
 }
+
 }
