@@ -60,4 +60,32 @@ void display(N* first)
     }
   
     }
+ 
+ int pop(N** first)
+{int saver;
+    N* new;
+    new=*first;
+    if(*first==NULL)
+    {
+       return 0;}
+   else  if((*first)->link==NULL)
+    {
+        saver=(*first)->info;
+        *first=NULL;
+        return saver;
+    }
+    else
+    {N* prev=NULL;
+        while(new->link!=NULL)
+        {prev=new;
+            new=new->link;
+            
+        }
+        saver=new->info;
+        prev->link=NULL;
+        free(new);
+        return saver;
+    }
+    
+}
 }
