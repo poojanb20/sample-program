@@ -41,3 +41,23 @@ main()
         }
     }
 }
+
+void display(N* first)
+{N* new;
+    if(first==NULL)
+    printf("Nothing to display\n");
+    
+   
+    else
+    {
+   
+    new=first;
+    while(new!=NULL)
+    {
+       printf("%d\t",new->info);
+       new=new->link;
+       
+    }
+  
+    }
+}
