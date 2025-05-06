@@ -75,3 +75,20 @@ int main()
     return 0;
 }
 
+int isEmpty()
+{
+    if (q.front == -1 || q.front > q.rear)
+    {
+        return 1;
+    } 
+    return 0;    
+}
+ 
+int isFull()
+{
+    if (q.rear == SIZE - 1)
+    {
+        return 1;
+    } 
+    return 0;    
+}
