@@ -91,6 +91,22 @@ int isFull()
         return 1;
     } 
     return 0;    
+}   
+
+void display()
+{
+    if (isEmpty())
+    {
+        printf("\nQueue is Empty\n");
+        return;
+    }
+    printf("\n");
+    int begin = q.front;
+    while (begin <= q.rear)
+    {
+        printf("%d ", q.values[begin]);
+        begin += 1;
+    }
 }
 
 void enqueue(int data)
