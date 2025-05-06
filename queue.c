@@ -92,3 +92,29 @@ int isFull()
     } 
     return 0;    
 }
+
+void enqueue(int data)
+{
+    if (isFull())
+    {
+        printf("\nQueue is Full!\n");
+        return;
+    } 
+    if (isEmpty())
+    {
+        q.front += 1;    
+    } 
+    q.rear += 1;
+    q.values[q.rear] = data;
+    printf("\n* %d was inserted!\n", data);
+}
+ 
+int dequeue() 
+{
+    if (!isEmpty())
+    {    
+        int data = q.values[q.front];
+        q.front += 1;
+        return data;
+    }
+}
