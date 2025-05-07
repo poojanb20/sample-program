@@ -1,3 +1,7 @@
+/*
+ * C program to implement queues using array
+ */
+
 #include<stdio.h>
  
 #define SIZE 3
